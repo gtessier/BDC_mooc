@@ -12,12 +12,6 @@ body {
   padding-top: 20px;
 }
 
-@media (min-width: 1500px) {
-  .container {
-    width: 1470px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   #descriptif .comment {
     min-height: 280px;
@@ -60,10 +54,6 @@ body {
   }
 }
 
-.container-fluid {
-  padding: 0px;
-}
-
 h1, h2, h3, h4, .promotion {
   color: white;
   margin: 0px;
@@ -98,6 +88,11 @@ h4 {
 
 p {
   margin: 0px;
+}
+
+.padding-horiz {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Common */
@@ -146,17 +141,22 @@ p {
   border: solid 4px;
 }
 
-.cta-blue {
+.cta-blue, .cta-blue-white {
   background: #247BA0;
   color: white;
   border-color: #247BA0;
 }
 
+.cta-blue:hover, .cta-blue-white:hover {
+  color: #247BA0;
+}
+
 .cta-blue:hover {
   background: transparent;
-  /*background: white;
-  opacity: 0.2;*/
-  color: #247BA0;
+}
+
+.cta-blue-white:hover {
+  background: white;
 }
 
 .cta-white {
@@ -219,6 +219,14 @@ p {
 .table-cell-middle {
   display: table-cell;
   vertical-align: middle;
+}
+
+.promotion p {
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  line-height: 19px;
+  position: absolute;
 }
 
 /* Button */
@@ -286,6 +294,19 @@ p {
 
 #objectives .title {
   color: #70C1B3;
+}
+
+.promotion-objectives {
+  height: 185px;
+  width: 316px;
+  background-image: url(../images/promotion_objectives.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.promotion-objectives p {
+  top: 60px;
+  left: 8px;
 }
 
 #objectives .caption {
@@ -429,9 +450,23 @@ p {
   color: #7DC1B3;
 }
 
+.promotion-teacher {
+  height: 253px;
+  width: 438px;
+  background-image: url(../images/promotion_teacher.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.promotion-teacher p {
+  top: 90px;
+  left: 30px;
+  width: 320px;
+}
+
 #teacher .content {
   max-width: 960px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 #teacher img {
@@ -526,7 +561,7 @@ p {
   text-align: center;
 }
 
-#footer p {
+#footer .quote {
   font-size: 1.2em;
   line-height: 24px;
   font-style: italic;
@@ -535,8 +570,8 @@ p {
   padding-bottom: 26px;
 }
 
-#footer .btn {
-  margin-bottom: 40px;
+#footer .retraction {
+  padding-bottom: 40px;
 }
 
 /* Copyright */
@@ -548,39 +583,4 @@ p {
   color: #666;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.promotion-objectives {
-  height: 185px;
-  width: 316px;
-  background-image: url(../images/promotion_objectives.svg);
-  background-repeat: no-repeat;
-  position: absolute;
-}
-
-.promotion-teacher {
-  /*height: 253px;
-  width: 438px;
-  background-image: url(../images/promotion_teacher.svg);
-  background-repeat: no-repeat;*/
-  position: absolute;
-}
-
-.promotion p {
-  -ms-transform: rotate(-30deg);
-  -webkit-transform: rotate(-30deg);
-  transform: rotate(-30deg);
-  line-height: 19px;
-  position: absolute;
-}
-
-.promotion-objectives p {
-  top: 60px;
-  left: 8px;
-}
-
-.promotion-teacher p {
-  top: 90px;
-  left: 30px;
-  width: 320px;
 }
